@@ -19,10 +19,12 @@
       <input type="text" name="txtTransversal" value="">
 
       <br><br>
-      <!--<input type="checkbox" name="chbEntrega1" value="PROPIETARIO"checked> Entrega al propietario.<br>
-        <input type="checkbox" name="chbEntrega2" value="TERCERO"> Entrega a un tercero.-->
-      <input type="radio" id="entrega" name="rbEntrega2" value="PROPIETARIO" onclick="hidefrm()" checked>Propietario<br>
-      <input type="radio" id="entrega" name="rbEntrega2" value="TERCERO" onclick="showfrm()">Tercero
+      <input type="checkbox" id="hbEntrega1" name="chbEntrega1" value="PROPIETARIO" onclick="hidefrm(this.checked);"
+        checked> Entrega al propietario.<br>
+      <input type="checkbox" d="hbEntrega2" name="chbEntrega2" value="TERCERO" onclick="showfrm(this.checked);"> Entrega
+      a un tercero.
+      <!-- <input type="radio" id="entrega" name="rbEntrega2" value="PROPIETARIO" onclick="hidefrm()" checked>Propietario<br>
+      <input type="radio" id="entrega" name="rbEntrega2" value="TERCERO" onclick="showfrm()">Tercero -->
 
       <br><br>
       Cantones: <select name="cmbCantones">
@@ -41,12 +43,13 @@
       </select>
 
       <br><br>
-      <input type="submit" name="SubmitDireccion" value="REGISTRAR">
+      <input type="submit" id="SubmitDireccion" name="SubmitDireccion" value="REGISTRAR">
     </fieldset>
   </form>
 
   <br>
-  <form action="./Script_PHP/procesa.php" method="POST" id="FormConfidencial" name="FormConfidencial" target="_blank" style="display:none;">
+  <form action="./Script_PHP/procesa.php" method="POST" id="FormConfidencial" name="FormConfidencial" target="_blank"
+    style="display:none;">
     <br>
     <fieldset>
       <legend>INFORMACIÓN CONFIDENCIAL</legend>

@@ -1,8 +1,19 @@
 // Mostrar y ocultar formulario
-function hidefrm() {
+
+function showfrm(selected) {
+  if (selected) {
+    document.getElementById("FormConfidencial").style.display = "block";
+  } else {
     document.getElementById("FormConfidencial").style.display = "none";
   }
+}
 
-  function showfrm() {
-    document.getElementById("FormConfidencial").style.display = "block";
+function hidefrm(selected) {
+  if (selected) {
+    document.getElementById("FormConfidencial").style.display = "none";
+    document.getElementById("SubmitDireccion").style.display = "block";
   }
+  if (!selected) {
+    document.getElementById("SubmitDireccion").style.display = "none";
+  }
+}
