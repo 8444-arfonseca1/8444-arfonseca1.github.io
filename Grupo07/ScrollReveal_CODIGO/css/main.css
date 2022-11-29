@@ -1,0 +1,73 @@
+body{
+    font-family: 'Lato', sans-serif;
+    color: white;
+}
+
+header{
+    margin-top: 75px;
+}
+
+/*Para que la seccion de testimonios este mas separada del header*/
+#testimonial{
+    background: #f1f1f1;
+    /*arriba derecha abajo izqueirda*/
+    padding: 50px 0 30px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/*Centrar el boton*/
+div.w-33 {
+    width: 33.33%;
+}
+
+div.center {
+    text-align: center;
+}
+
+li{
+    list-style:none
+}
+
+body{
+    background-color: #040714;
+}
+
+.btn{
+    color: white;
+    background-color: #881b1b;
+    border-color: #040714;
+}
+
+nav.navbar{
+    background-color: #040714;
+    color: white;
+}
+
+.navbar {
+    font-size: 20px;
+    color: #e3e5e9;
+    font-weight: bold;
+}
+
+.form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-login {
+    width: 400px;
+    height: 340px;
+    background: #4e4d4d;
+    margin: auto;
+    margin-top: 180px;
+    box-shadow: 7px 13px 37px #000;
+    padding: 20px 30px;
+    border-top: 4px solid #017bab;
+    color: white;
+  }
