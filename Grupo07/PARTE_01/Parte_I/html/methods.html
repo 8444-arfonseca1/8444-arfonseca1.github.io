@@ -27,8 +27,6 @@
   <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-
-  
   <link rel="stylesheet" href="../assets/codemirror-5.65.10/lib/codemirror.css"></link>
   <link rel="stylesheet" href="../assets/codemirror-5.65.10/theme/icecoder.css"></link>
   <link rel="stylesheet" href="../assets/codemirror-5.65.10/theme/mbo.css"></link>
@@ -101,44 +99,60 @@
 
     <!-- ======= Portfolio Details Section ======= -->
     <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
+      <div class="container postext">
 
         <div class="row gy-4">
 
-          <div class="col-lg-12">
-              <h3>Tipos de Métodos</h3>
-
+          <div class="col-lg-10">
+            <h1>Métodos</h1>
+            <p>
+              Se puede acceder al HTML DOM con JavaScript y con otros lenguajes de programación.<br>
+              En el DOM, todos los elementos HTML se definen como objetos .<br>
+              La interfaz de programación son las propiedades y métodos de cada objeto.<br>
+              Una <strong>propiedad</strong> es un valor que puede obtener o establecer como cambiar el contenido de un elemento HTML.<br>
+              Un <strong>método</strong> es una acción que puede realizar puede ser agregar o eliminar un elemento HTML.
+            </p>
+            <p>
+              <strong>Ejemplo:</strong><br>
+              Para ejemplo vamos a usar el siguiente código HTML:
+              Consiste en usar el metodo <strong>getElementById</strong> junto con el metodo <strong>innerHTML</strong> para cambiar el contenido de un elemento HTML.<br>
               <ul>
-                <li> <strong>document.getElementById(id)</strong></li>
-                <p>La propiedad id de la interfaz Element representa el identificador del elemento, reflejando el
-                  atributo global id.
-                  <br>
-                  Si el valor de id no es la cadena vacía, debe ser único en un documento.
-                  <br>
-                  La identificación se usa a menudo con getElementById() para recuperar un elemento en particular. Otro
-                  caso común es usar la ID de un elemento como selector al diseñar el documento con CSS.
-                </p>
-                <div>
+                <li>
+                  La propiedad <strong>innerHTML</strong> es útil para obtener o reemplazar el contenido de los elementos HTML.
+                </li>
+              </ul>
+            </p>
 
-        <textarea id=code name=code>
+            <center class="msgg">Cualquier cambio que se realice, se reflejará automáticamente</center>
+            <div style="margin-left: 50px;">
+              <textarea id=code name=code>
 <!DOCTYPE html>
 <html>
+  <meta charset="utf-8">
 <body>        
-  <h2>My First Page</h2>
+  <h2>Uando getElementById junto con innerHTML</h2>
        
-  <p id="demo"></p>
+  <p id="demo">Este texto se cambia por: Hola Mundo!</p>
           
   <script>
-    document.getElementById("demo").innerHTML = "Hello World!";
+    document.getElementById("demo").innerHTML = "Hola Mundo!";
   </script>
           
 </body>
 </html>
-    </textarea>
-        <iframe id=preview></iframe>
-
-                </div>
-                <br>
+              </textarea>
+              <iframe id=preview></iframe>
+            </div>
+            <br>
+              <h3>Tipos de Métodos</h3>
+              <ul>
+                <li> <strong>document.getElementById(id)</strong></li>
+                <p>La propiedad id de la interfaz Element representa el identificador del elemento, reflejando el
+                  atributo global id. Si el valor de id no es la cadena vacía, debe ser único en un documento.
+                  <br>
+                  La identificación se usa a menudo con getElementById() para recuperar un elemento en particular. Otro
+                  caso común es usar la ID de un elemento como selector al diseñar el documento con CSS.
+                </p>
                 <li> <strong>document.getElementsByClassName(nombreDeClase)</strong></li>
                 <p>
                   El método getElementsByClassName de la interfaz Document devuelve un objeto similar a una matriz de
@@ -148,39 +162,6 @@
                   También puede llamar a getElementsByClassName() en cualquier elemento; devolverá solo los elementos
                   que son descendientes del elemento raíz especificado con los nombres de clase dados.
                 </p>
-                <div>
-                  <textarea id=code2 name=code2>
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset=utf-8>
-    <style>
-        p {
-            font-family: monospace;
-        }
-        #pane {
-            border: 1px solid black;
-        }
-    </style>
-</head>
-<body>
-    <p>Canvas pane goes here:</p>
-    <canvas id=pane width=300 height=200></canvas>
-    <script>
-        var canvas = document.getElementById('pane');
-        var context = canvas.getContext('2d');
-
-        context.fillStyle = 'rgb(250,0,0)';
-        context.fillRect(10, 10, 55, 50);
-
-        context.fillStyle = 'rgba(0, 0, 250, 0.5)';
-        context.fillRect(30, 30, 55, 50);
-    </script>
-</body>
-</html>
-    </textarea>
-        <iframe id=preview2></iframe>
-                </div>
                 <li> <strong>document.getElementsByTagName(nombreDeEtiqueta)</strong></li>
                 <p>
                   El método getElementsByTagName de la interfaz Document devuelve una HTMLCollection de elementos con el
@@ -190,39 +171,6 @@
                   que significa que se actualiza automáticamente para mantenerse sincronizada con el árbol DOM sin tener
                   que volver a llamar a document.getElementsByTagName().
                 </p>
-                <div>
-                  <textarea id=code3 name=code>
-<!DOCTYPE html>
-<html>
-  <meta charset=utf-8>
-  <head>
-    <style>
-        p {
-            font-family: monospace;
-        }
-        #pane {
-            border: 1px solid black;
-        }
-    </style>
-</head>
-<body>
-    <p>Canvas pane goes here:</p>
-    <canvas id=pane width=300 height=200></canvas>
-    <script>
-        var canvas = document.getElementById('pane');
-        var context = canvas.getContext('2d');
-
-        context.fillStyle = 'rgb(250,0,0)';
-        context.fillRect(10, 10, 55, 50);
-
-        context.fillStyle = 'rgba(0, 0, 250, 0.5)';
-        context.fillRect(30, 30, 55, 50);
-    </script>
-</body>
-</html>
-                  </textarea>
-                  <iframe id=preview3></iframe>
-                </div>
                 <li> <strong>document.querySelector(selectorCss)</strong></li>
                 <p>
                   El método de documento querySelector() devuelve el primer elemento dentro del documento que coincide
@@ -235,10 +183,8 @@
                   lista de los elementos del documento que coinciden con el grupo de selectores especificado.
                 </p>
               </ul>
-
           </div>
         </div>
-
       </div>
     </section><!-- End Portfolio Details Section -->
 
@@ -288,7 +234,6 @@
   <script>
     var delay;
     // Initialize CodeMirror editor with a nice html5 canvas demo.
-
     var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
           mode: 'text/html',
           lineNumbers: true,
@@ -299,58 +244,18 @@
 
     editor.on("change", function () {
     clearTimeout(delay);
-    delay = setTimeout(updatePreview(editor,'preview'), 100);
+    delay = setTimeout(updatePreview(), 100);
     });
 
-    var editor2 = CodeMirror.fromTextArea(document.getElementById('code2'), {
-        mode: 'text/html',
-        lineNumbers: true,
-        theme: 'mbo',
-        autoCloseTags: true
-    });
-    editor2.setSize("500", "400");
-
-    editor2.on("change", function () {
-        clearTimeout(delay);
-        delay = setTimeout(updatePreview(editor2,'preview2'), 100);
-    });
-
-    var editor3 = CodeMirror.fromTextArea(document.getElementById('code3'), {
-        mode: 'text/html',
-        lineNumbers: true,
-        theme: 'mbo',
-        autoCloseTags: true
-    });
-    editor3.setSize("500", "400");
-
-    editor3.on("change", function () {
-        clearTimeout(delay);
-        delay = setTimeout(updatePreview(editor3,'preview3'), 100);
-    });
-
-    // function updatePreview() {
-    //     var previewFrame = document.getElementById('preview');
-    //     var preview = previewFrame.contentDocument || previewFrame.contentWindow.document;
-    //     preview.open();
-    //     preview.write(editor.getValue());
-    //     preview.close();
-    // }
-
-    function updatePreview(editor, preview) {
-      var editor = editor;
-      var preview = preview;
-        var previewFrame = document.getElementById(preview);
+    function updatePreview() {
+        var previewFrame = document.getElementById('preview');
         var preview = previewFrame.contentDocument || previewFrame.contentWindow.document;
         preview.open();
         preview.write(editor.getValue());
         preview.close();
     }
 
-    setTimeout(updatePreview(editor, 'preview'), 300);
-    setTimeout(updatePreview(editor2, 'preview2'), 300);
-    setTimeout(updatePreview(editor3, 'preview3'), 300);
-    setTimeout(updatePreview(editor3, 'preview4'), 300);
-    setTimeout(updatePreview(editor3, 'preview5'), 300);
+    setTimeout(updatePreview, 100);
 </script>
 
 </body>
