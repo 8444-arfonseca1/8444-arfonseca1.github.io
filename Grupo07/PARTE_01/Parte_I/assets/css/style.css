@@ -49,8 +49,9 @@ iframe {
 }
 
 .postext {
-  margin-left: 10%;
+  margin-left: 14%;
 }
+
 .msgg {
   font-weight: bold;
   color: red;
@@ -58,6 +59,22 @@ iframe {
   font-size: small;
   text-transform: uppercase;
 
+}
+
+.tittle {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  color: #222222;
+}
+
+.subtittle {
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  color: #222222;
 }
 
 /*--------------------------------------------------------------

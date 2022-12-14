@@ -4,14 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <title>Métodos - DOM</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
 
   <!-- Favicons -->
   <link href="../assets/img/favicon.png" rel="icon">
-  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link
@@ -27,10 +25,11 @@
   <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="../assets/codemirror-5.65.10/lib/codemirror.css"></link>
-  <link rel="stylesheet" href="../assets/codemirror-5.65.10/theme/icecoder.css"></link>
-  <link rel="stylesheet" href="../assets/codemirror-5.65.10/theme/mbo.css"></link>
-
+  <!-- CodeMirror CSS-->
+  <link rel="stylesheet" href="../assets/codemirror-5.65.10/lib/codemirror.css" />
+  <link rel="stylesheet" href="../assets/codemirror-5.65.10/theme/icecoder.css" />
+  <link rel="stylesheet" href="../assets/codemirror-5.65.10/theme/mbo.css" />
+  <!-- CodeMirror JS-->
   <script src="../assets/codemirror-5.65.10/lib/codemirror.js"></script>
   <script src="../assets/codemirror-5.65.10/mode/xml/xml.js"></script>
   <script src="../assets/codemirror-5.65.10/addon/edit/closetag.js"></script>
@@ -71,7 +70,6 @@
           <li><a class="nav-link scrollto" href="../index.html#html">HTML</a></li>
           <li><a class="nav-link scrollto" href="../index.html#css">CSS</a></li>
           <li><a class="nav-link scrollto" href="../index.html#forms">Formularios</a></li>
-
           <li><a class="nav-link scrollto" href="../index.html#contact">Contacto</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -97,14 +95,12 @@
       </div>
     </section><!-- End Breadcrumbs -->
 
-    <!-- ======= Portfolio Details Section ======= -->
+    <!-- ======= METHODS Details Section ======= -->
     <section id="portfolio-details" class="portfolio-details">
       <div class="container postext">
-
         <div class="row gy-4">
-
           <div class="col-lg-10">
-            <h1>Métodos</h1>
+            <h1 class="tittle">Métodos</h1>
             <p>
               Se puede acceder al HTML DOM con JavaScript y con otros lenguajes de programación.<br>
               En el DOM, todos los elementos HTML se definen como objetos .<br>
@@ -130,7 +126,7 @@
 <html>
   <meta charset="utf-8">
 <body>        
-  <h2>Uando getElementById junto con innerHTML</h2>
+  <h2>Usando getElementById junto con innerHTML</h2>
        
   <p id="demo">Este texto se cambia por: Hola Mundo!</p>
           
@@ -144,7 +140,8 @@
               <iframe id=preview></iframe>
             </div>
             <br>
-              <h3>Tipos de Métodos</h3>
+
+              <h2 class="subtittle">Tipos de Métodos</h2>
               <ul>
                 <li> <strong>document.getElementById(id)</strong></li>
                 <p>La propiedad id de la interfaz Element representa el identificador del elemento, reflejando el
@@ -186,7 +183,7 @@
           </div>
         </div>
       </div>
-    </section><!-- End Portfolio Details Section -->
+    </section><!-- End METHODS Details Section -->
 
   </main><!-- End #main -->
 
@@ -233,7 +230,7 @@
 
   <script>
     var delay;
-    // Initialize CodeMirror editor with a nice html5 canvas demo.
+
     var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
           mode: 'text/html',
           lineNumbers: true,
