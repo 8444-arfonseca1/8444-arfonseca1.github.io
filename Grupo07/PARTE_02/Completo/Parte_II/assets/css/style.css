@@ -768,7 +768,7 @@ section {
 
 .cta p {
   color: #fff;
-}
+}	
 
 .cta .cta-btn {
   font-family: "Raleway", sans-serif;
@@ -785,6 +785,33 @@ section {
 }
 
 .cta .cta-btn:hover {
+  background: #ffc107;
+}
+
+.methods{
+	background: #fff;
+  background-size: cover;
+  padding: 60px 0;
+}
+
+.methods p {
+  color: #000000;
+}
+.methods .methods-btn{
+	font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 35px;
+  border-radius: 25px;
+  transition: 0.5s;
+  margin-top: 10px;
+  border: 2px solid #ffc107;
+  color: #000000;
+}
+
+.methods .methods-btn:hover {
   background: #ffc107;
 }
 
