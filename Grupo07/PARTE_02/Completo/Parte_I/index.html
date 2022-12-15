@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>JS HTML DOM BÁSICO</title>
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Vesperr - v4.9.1
+  * Template URL: https://bootstrapmade.com/vesperr-free-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="index.html">Grupo 07</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#intro">Introducción</a></li>
+          <li><a class="nav-link scrollto" href="#temas">Temas</a></li>
+          <li><a class="nav-link scrollto" href="#methods">Métodos</a></li>
+          <li><a class="nav-link scrollto" href="#components">Componentes</a></li>
+          <li><a class="nav-link scrollto" href="#elements">Elementos</a></li>
+          <li><a class="nav-link scrollto" href="#html">HTML</a></li>
+          <li><a class="nav-link scrollto" href="#css">CSS</a></li>
+          <li><a class="nav-link scrollto" href="#forms">Formularios</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
+          <li><a class="getstarted scrollto" href="#intro">Iniciar</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">JavaScript HTML DOM Básico</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">Aquí encontraras los conceptos básico para comprender el DOM</h2>
+          <div data-aos="fade-up" data-aos-delay="800">
+            <a href="#intro" class="btn-get-started scrollto">Iniciar</a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left" data-aos-delay="200">
+          <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+    <!-- ======= INTRODUCCION Section ======= -->
+    <section id="intro" class="intro section-bg">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Introducción</h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+            <p>
+              El DOM (Document Object Model) es el modelo que usa el navegador para estructurar las etiquetas HTML y
+              puedes aprovechar esto para modificarlas y hacer cambios con código JavaScript
+            </p>
+            <p>El DOM es un estándar W3C (World Wide Web Consortium) que se divide en 3 partes diferentes:</p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Core DOM: Modelo estándar para todos los tipos de documentos</li>
+              <li><i class="ri-check-double-line"></i> XML DOM: Modelo estándar para documentos XML</li>
+              <li><i class="ri-check-double-line"></i> HTML DOM: modelo estándar para documentos HTML</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
+            <p>Se representa el documento como un árbol de nodos, en donde cada nodo representa una parte del documento
+              (puede tratarse de un elemento, una cadena de texto o un comentario)</p>
+            <img src="assets/img/DOM/pic_htmltree.gif" alt="">
+            <a href="html/intro.html" class="btn-learn-more" >Vamos a aprender ....</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End INTRODUCCION Section -->
+
+
+    <!-- ======= TEMAS Section ======= -->
+    <section id="temas" class="features">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Temas</h2>
+          <p>Aquí encontraras todos ls temas que se van a tratar del HTML DOM BÁSICO</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-4 col-md-4">
+            <div class="icon-box">
+              <i class="ri-input-method-line" style="color: #11dbcf;"></i>
+              <h3><a href="#methods">1. Métodos</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="ri-price-tag-2-line" style="color: #4233ff;"></i>
+              <h3><a href="#components">2. Componentes</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="ri-calendar-todo-line" style="color: #e80368;"></i>
+              <h3><a href="#elements">3. Elementos</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 mt-4">
+            <div class="icon-box">
+              <i class="ri-html5-fill" style="color: #ffbb2c;"></i>
+              <h3><a href="#html">4. HTML</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 mt-4">
+            <div class="icon-box">
+              <i class="ri-css3-fill" style="color: #5578ff;"></i>
+              <h3><a href="#css">5. CSS</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 mt-4">
+            <div class="icon-box">
+              <i class="ri-file-list-3-line" style="color: #ffa76e;"></i>
+              <h3><a href="#forms">6. Formularios</a></h3>
+            </div>
+        </div>
+      </div>
+    </section><!-- End TEMAS Section -->
+
+
+
+    <!-- ======= METODOS Section ======= -->
+    <section id="methods" class="methods section-bg">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Métodos</h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+            <p>
+              Los métodos HTML DOM son acciones que puede realizar en los diferentes elementos HTML como agregar o
+              eliminar un elemento HTML.
+            </p>
+            <p>Dentro de los diferentes métodos podemos encontrar los siguientes:</p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> document.getElementById(id)</li>
+              <li><i class="ri-check-double-line"></i> document.getElementsByClassName(nombreDeClase)</li>
+
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
+            <ul>
+              <li><i class="ri-check-double-line"></i> document.getElementsByTagName(nombreDeEtiqueta)</li>
+              <li><i class="ri-check-double-line"></i> document.querySelector(selectorCss)</li>
+              <li><i class="ri-check-double-line"></i> document.querySelectorAll(selectorCss)</li>
+            </ul>
+            <a href="html/methods.html" class="btn-learn-more" >Vamos a aprender ....</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End METODOS Section -->
+
+    <!-- ======= COMPONENTES Section ======= -->
+    <section id="components" class="components ">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Componentes</h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6" data-aos="fade-down" data-aos-delay="150">
+            <p>
+              El objeto del documento HTML DOM es el propietario de todos los demás objetos en la página web.
+            </p>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-down" data-aos-delay="300">
+            <ul>
+              <li><i class="ri-check-double-line"></i> Encontrar elementos HTML</li>
+              <li><i class="ri-check-double-line"></i> Cambiar elementos HTML</li>
+              <li><i class="ri-check-double-line"></i> Añadir y eliminar elementos</li>
+              <li><i class="ri-check-double-line"></i> Añadir controladores de eventos</li>
+            </ul>
+            <a href="html/components.html" class="btn-learn-more" >Vamos a aprender ....</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End COMPONENTES Section -->
+
+    <!-- ======= ELEMENTOS Section ======= -->
+    <section id="elements" class="elements section-bg">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Elementos</h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+            <p>
+              Se pueden manipluar los elementos HTML con JavaScript,pero primero debemos encontrar los elementos.
+            </p>
+            <p>Podemos encontrarlos de diferentes masneras, como:</p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Encontrar elementos HTML por ID</li>
+              <li><i class="ri-check-double-line"></i> Encontrar elementos HTML por nombre de etiqueta</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
+            <ul>
+              <li><i class="ri-check-double-line"></i> Encontrar elementos HTML por nombre de clase</li>
+              <li><i class="ri-check-double-line"></i> Encontrar elementos HTML mediante selectores CSS</li>
+              <li><i class="ri-check-double-line"></i> Encontrar elementos HTML por colecciones de objetos HTML</li>
+            </ul>
+            <a href="html/elements.html" class="btn-learn-more" >Vamos a aprender ....</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End ELEMENTOS Section -->
+
+    <!-- ======= HTML Section ======= -->
+    <section id="html" class="html">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>HTML</h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+            <p>
+              El HTML DOM permite que JavaScript cambie el contenido de los elementos HTML.
+            </p>
+            <p>Para cambiar el cotenido de un elemento HTML, se usa esta sintaxis: [método].innerHTML = [nuevo HTML]</p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> document.getElementById("p1").innerHTML = "Nuevo texto!";</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
+            <p>
+              Tambien podemos modificar el valor de los atributos HTML.
+            </p>
+            <p>Para cambiar el atributo de un elemento HTML, se usa esta sintaxis: [método].attribute = [nuevo valor]
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> document.getElementById("myImage").src = "landscape.jpg";</li>
+            </ul>
+            <a href="html/html.html" class="btn-learn-more" >Vamos a aprender ....</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End HTML Section -->
+
+    <!-- ======= CSS Section ======= -->
+    <section id="css" class="css section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>CSS</h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+            <p>
+              El HTML DOM permite que JavaScript cambie el estilo de los elementos HTML con el uso de diferentes metodos
+              <br>Por ejemplo:
+            </p>
+            <p>Para cambiar el estilo de un elemento HTML, se usa esta sintaxis: [método].style.[propiedad] = [nuevo
+              stilo]</p>
+            <ul>
+              <li><i class="ri-check-double-line"></i>document.getElementById("p1").style.color = "blue";</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
+            <p>
+              El HTML DOM le permite ejecutar código cuando ocurre un evento.
+
+              Los eventos son generados por el navegador cuando "le suceden cosas" a los elementos HTML:
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Se hace clic en un elemento</li>
+              <li><i class="ri-check-double-line"></i> La página ha cargado</li>
+              <li><i class="ri-check-double-line"></i> Los campos de entrada se cambian</li>
+            </ul>
+            <a href="html/css.html" class="btn-learn-more" >Vamos a aprender ....</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End CSS Section -->
+
+    <!-- ======= FORMULARIOS Section ======= -->
+    <section id="forms" class="forms">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Formularios</h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+            <p>
+              La validación de formularios HTML se puede realizar mediante JavaScript. Si un campo de formulario está
+              vacío, una función alerta con un mensaje y devuelve falso para
+              evitar que se envíe el formulario.
+            </p>
+            <p>
+              La validación de datos es el proceso de garantizar que la entrada del usuario sea limpia, correcta y útil,
+              para ellos nos podemos plantear las siguientes preguntas:
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> ¿Ha rellenado el usuario todos los campos obligatorios?</li>
+              <li><i class="ri-check-double-line"></i> ¿El usuario ha ingresado una fecha válida?</li>
+              <li><i class="ri-check-double-line"></i> ¿Ha ingresado el usuario texto en un campo numérico?</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
+            <p>
+              La validación se puede definir mediante muchos métodos diferentes y se puede implementar de muchas maneras
+              diferentes.
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> La validación del lado del servidor la realiza un servidor web,
+                después de que la entrada se haya enviado al servidor.</li>
+              <li><i class="ri-check-double-line"></i> La validación del lado del cliente la realiza un navegador web,
+                antes de enviar la entrada a un servidor web.</li>
+              <a href="html/forms.html" class="btn-learn-more" >Vamos a aprender ....</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End FORMULARIOS Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-down">
+          <h2>Contacto</h2>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="contact-about">
+              <h3>Grupo 07</h3>
+              <div class="social-links">
+                <a href="https://twitter.com/" class="twitter" target="_blank"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.facebook.com/" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/" class="instagram" target="_blank"><i
+                    class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-4 mt-md-0" data-aos="fade-right" data-aos-delay="200">
+            <div class="info">
+              <div>
+                <i class="ri-map-pin-line"></i>
+                <p>Av. General Rumiñahui s/n<br>y Ambato</p>
+              </div>
+
+              <div>
+                <i class="ri-mail-send-line"></i>
+                <p>info@grupo07.com</p>
+              </div>
+
+              <div>
+                <i class="ri-phone-line"></i>
+                <p>+593 984435921</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-12" data-aos="fade-left" data-aos-delay="300">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Nombres" required>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" required>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" placeholder="Mensaje" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Cargando</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Tu mensaje ha sido enviado. Gracias!</div>
+              </div>
+              <div class="text-center"><button type="submit">Enviar Mensaje</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <div class="col-lg-6 text-lg-left text-center">
+          <div class="copyright">
+            &copy; Copyright <strong>Grupo 07</strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/vesperr-free-bootstrap-template/ -->
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+            <a href="#hero" class="scrollto">Home</a>
+            <a href="#intro" class="scrollto">Introducción</a>
+            <a href="#">Política de privacidad</a>
+            <a href="#">Terminos de uso</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
