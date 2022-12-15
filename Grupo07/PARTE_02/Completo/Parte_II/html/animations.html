@@ -6,7 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Nombreee</title>
+  <title>Animaciones - DOM</title>
 
   <!-- Favicons -->
   <link href="../assets/img/favicon.png" rel="icon">
@@ -89,10 +89,156 @@
     </section><!-- End Breadcrumbs -->
 
     <section class="inner-page">
-      <div class="container">
-        <p>
-          Example inner page template
-        </p>
+      <div class="container postext">
+        <div class="row gy-4">
+          <div class="col-lg-10">
+            <h1 class="tittle">Animaciones</h1>
+            <br>
+            <h2 class="subtittle">Página web básica</h2>
+            <p>
+              Para demostrar cómo crear animaciones HTML con JavaScript, usaremos una página web simple:
+            </p>
+            <div style="margin-left: 50px;">
+            <textarea id=mostrar name=code>
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+</head>
+<html>
+<body>
+
+  <h1>My First JavaScript Animation</h1>
+              
+  <div id="animation">My animation will go here</div>
+              
+</body>
+</html>
+</textarea>
+          </div>
+          <br>
+
+            <h2 class="subtittle">Creació del Contenedor de la animación</h2>
+            <p>
+              Todas las animaciones deben ser relativas a un elemento contenedor.
+            </p>
+            <div style="margin-left: 50px;">
+              <textarea id=mostrar2 name=code>
+<div id ="container">
+  <div id ="animate">My animation will go here</div>
+</div>
+              </textarea>
+            </div>
+            <br>
+
+            <h2 class="subtittle">Añadiendo estilo a los elementos</h2>
+            <p>
+              <ul class="lis">
+                <li>El elemento contenedor debe crearse con estilo: <strong>"position: relative"</strong>.</li>
+                <li>El elemento de animación debe crearse con estilo: <strong>" position: absolute"</strong>.</li>
+              </ul>
+            </p>
+            <div style="margin-left: 50px;">
+              <textarea id=mostrar3 name=code>
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: red;
+}
+              </textarea>
+            </div>
+            <br>
+
+            <h2 class="subtittle">Código de la animación</h2>
+            <p>
+              Las animaciones de JavaScript se realizan mediante la programación de cambios graduales en el estilo de un elemento.<br>
+              Los cambios son llamados por un temporizador. Cuando el intervalo del temporizador es pequeño, la animación parece continua.<br>
+            </p>
+            <div style="margin-left: 50px;">
+              <textarea id=mostrar4 name=code>
+id = setInterval(frame, 5);
+
+function frame() {
+  if (/* test for finished */) {
+    clearInterval(id);
+  } else {
+    /* code to change the element style */ 
+  }
+}
+              </textarea>
+            </div>
+            <br>
+
+            <h2 class="subtittle">Implementación</h2>
+            <p>
+              <strong>Ejemplo:</strong><br>
+              En este ejemplo se unen todas las partes del codigo que hemos visto y se crea una animación completa:<br>
+              </p>
+            <center class="msgg">Cualquier cambio que se realice, se reflejará automáticamente</center>
+            <div style="margin-left: 50px;">
+              <textarea id=code name=code>
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+</head>
+<html>
+<style>
+  #container {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    background: yellow;
+  }
+  #animate {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: red;
+  }
+</style>
+<body>
+
+  <p><button onclick="myMove()">Click Me</button></p> 
+
+  <div id ="container">
+    <div id ="animate"></div>
+  </div>
+                
+<script>
+  function myMove() {
+    let id = null;
+    let pos = 0;
+    clearInterval(id);
+    id = setInterval(frame, 5);
+
+    function frame() {
+      if (pos == 350) {
+        clearInterval(id);
+      } else {
+      pos++; 
+      document.getElementById("animate").style.top = pos + "px"; 
+      document.getElementById("animate").style.left = pos + "px"; 
+      }
+    }
+  }
+
+</script>
+
+</body>
+</html>
+              </textarea>
+              <iframe id=preview style="height: 500px;"></iframe>
+            </div>
+            <br>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -174,6 +320,68 @@
 
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>
+
+  <script>
+    var delay;
+
+    var noEditor = CodeMirror.fromTextArea(document.getElementById('mostrar'), {
+      mode: 'htmlmixed',
+      lineNumbers: false,
+      theme: 'default',
+      readOnly: true
+    });
+    noEditor.setSize("100%", "285");
+
+    var noEditor2 = CodeMirror.fromTextArea(document.getElementById('mostrar2'), {
+      mode: 'htmlmixed',
+      lineNumbers: false,
+      theme: 'default',
+      readOnly: true
+    });
+    noEditor2.setSize("100%", "90");
+
+    var noEditor3 = CodeMirror.fromTextArea(document.getElementById('mostrar3'), {
+      mode: 'css',
+      lineNumbers: false,
+      theme: 'default',
+      readOnly: true
+    });
+    noEditor3.setSize("100%", "290");
+
+    var noEditor4 = CodeMirror.fromTextArea(document.getElementById('mostrar4'), {
+      mode: 'javascript',
+      lineNumbers: false,
+      theme: 'default',
+      readOnly: true
+    });
+    noEditor4.setSize("100%", "210");
+
+    var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
+      mode: 'text/html',
+      lineNumbers: true,
+      theme: 'mbo',
+      autoCloseTags: true
+    });
+    editor.setSize("500", "500");
+
+    editor.on("change", function () {
+      clearTimeout(delay);
+      delay = setTimeout(updatePreview(editor, 'preview'), 100);
+    });
+
+    function updatePreview(editor, preview) {
+      var editor = editor;
+      var preview = preview;
+      var previewFrame = document.getElementById(preview);
+      var preview = previewFrame.contentDocument || previewFrame.contentWindow.document;
+      preview.open();
+      preview.write(editor.getValue());
+      preview.close();
+    }
+
+    setTimeout(updatePreview(editor, 'preview'), 100);
+
+  </script>
 
 </body>
 
