@@ -58,8 +58,14 @@ iframe {
   font-style: italic;
   font-size: small;
   text-transform: uppercase;
-
 }
+
+img {
+  max-width: 1auto;
+}
+
+.lis {
+  list-style-type: circle;}
 
 .tittle {
   font-size: 32px;
