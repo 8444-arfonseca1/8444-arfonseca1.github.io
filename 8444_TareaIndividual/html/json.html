@@ -12,7 +12,9 @@
   <link href="../assets/img/json favi.png" rel="icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
@@ -96,252 +98,106 @@
         <div class="row gy-4">
           <div class="col-lg-10">
             <h1 class="tittle">¿Qué es JSON?</h1>
-            <p>JavaScript Object Notation
+            <p>JSON, cuyas siglas significan en verdad JavaScript object notation que, en español se traducen como,
+              notación de objetos de JavaScript, es un formato de intercambio de datos que resulta muy fácil de leer y
+              escribir para los programadores y sencillo de interpretar y crear para las máquinas.<br>
+
+              Es utilizado para transmitir datos en aplicaciones web (por ejemplo, enviar y recibir datos de una API) y
+              se basa en el lenguaje de programación JavaScript. JSON utiliza una sintaxis de objetos de JavaScript para
+              almacenar y transmitir datos de manera que sea fácil de leer y escribir para humanos y también fácil de
+              interpretar y procesar por máquinas. JSON es un formato de texto plano, por lo que se puede transmitir a
+              través de Internet y utilizar en una amplia variedad de lenguajes de programación.
             </p>
 
+            <h2 class="subtittle">Para qué sirve:</h2>
+
+            <p>JSON se utiliza a menudo como alternativa a otras bases de datos y formatos de almacenamiento de datos,
+              como XML o CSV. Es especialmente popular en aplicaciones web, donde se puede convertir fácilmente desde y
+              hacia otros formatos como HTML y JavaScript. Además, como la sintaxis de JSON es sencilla y fácil de
+              entender, muchos desarrolladores lo encuentran mucho más fácil de usar que otros formatos de datos.
+            </p>
+
+            <h2 class="subtittle">Características:</h2>
+
             <ul class="lis">
-              <li>Encontrar elementos HTML por <strong>ID</strong>.</li>
-              <li>Encontrar elementos HTML por <strong>nombre de etiqueta</strong>.</li>
-              <li>Encontrar elementos HTML por <strong>nombre de clase</strong>.</li>
-              <li>Encontrar elementos HTML mediante <strong>selectores CSS</strong>.</li>
+              <li>Consiste en pares "clave - valor".</li>
+              <li>Requiere usar comillas dobles para las cadenas y los nombres de propiedades. Las comillas simples no
+                son válidas.</li>
+
+              <li>Es un formato flexible, ligero y fácilmente transferible a través de las redes.</li>
+              <li>Los valores pueden cadenas, números o boleanos, así como otros objetos JSON, con cualquier nivel de
+                anidación.</li>
               <li>Encontrar elementos HTML por <strong>colecciones de objetos HTML</strong>.</li>
             </ul>
 
-            <!-- Por nombre de ID -->
-            <h2 class="subtittle">Encontrar elementos HTML por ID</h2>
+            <h3 class="subtittle2">Ejemplo de JSON:</h3>
+            <div style="margin-left: 50px;">
+              <textarea id=mostrarjson name=noeditor>
+{
+  "libros": [
+    {
+      "título": "El señor de los anillos",
+      "autor": "J.R.R. Tolkien",
+      "año": 1954
+    },
+    {
+      "título": "1984",
+      "autor": "George Orwell",
+      "año": 1949
+    },
+    {
+      "título": "Matar a un ruiseñor",
+      "autor": "Harper Lee",
+      "año": 1960
+    }
+  ]
+}
+              </textarea>
+            </div>
+            <br>
+            <p>&nbsp;</p>
+
+            <h3 class="subtittle2">Ejemplo de JSON y HTML:</h3>
             <p>
-              <strong>Ejemplo:</strong><br>
-              En este ejemplo se encuentra el elemento con <strong>id="intro"</strong> con el método
-              <strong>document.getElementById()</strong>:<br>
-            <ul class="lis">
-              <li>Si se encuentra el elemento, el método devolverá el elemento como un objeto.</li>
-                <li>Si no se encuentra el elemento, el elemento contendrá <strong>null</strong>.</li>
-            </ul>
+              En este ejemplo, se define un objeto JSON con tres propiedades: <strong><i>"nombre"</i></strong>,
+              <strong><i>"edad"</i></strong> y <strong><i>"ciudad"</i></strong>. Luego, se usa
+              JavaScript para acceder a estas propiedades y mostrarlas en el elemento <strong>&lt;p&gt;</strong> en la
+              página HTML.
             </p>
-            <center class="msgg">Cualquier cambio que se realice, se reflejará automáticamente</center>
             <div style="margin-left: 50px;">
               <textarea id=code name=code>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON</title>
 </head>
 <body>
-  <h2>Encontrando elementos HTML por ID</h2>
-
-  <p id="intro">Uso de los elmentos de JavaScript HTML DOM</p>
-  <p>Este ejemplo demuestra el uso del metodo: <b>getElementsById</b></p>
+  <h2>Ejemplo de JSON</h2>
 
   <p id="demo"></p>
 
   <script>
-    // const elemento = document.getElementById("intro");
-    // document.getElementById("demo").innerHTML = "El texto que hay en el parrafo con el id='intro' es: " + elemento.innerHTML;
-
-    // Por motivos de ejecución en la página, no se puede usar el método anterior, por lo que se debe usar el método siguiente:
-    document.getElementById("demo").innerHTML = 
-    "El texto que hay en el parrafo con el id='intro' es: " + 
-    document.getElementById("intro").innerHTML;
+    var json = {
+      "nombre": "Juan",
+      "edad": 30,
+      "ciudad": "Quito"
+    };
+    document.getElementById("demo").innerHTML = json.nombre + " es de " + json.ciudad;
   </script>
-
 </body>
 </html>
+
               </textarea>
               <iframe id=preview></iframe>
             </div>
-            <br>
-            <p>
-              <strong>Nota:</strong> El método <strong>document.getElementById()</strong> solo devuelve el primer elemento con el ID especificado.
-              Si hay más de un elemento con el mismo ID, este método devolverá el primer elemento en el documento.
-            </p>
-            <br>
 
-            <!-- Por nombre de etiqueta -->
-            <h2 class="subtittle">Encontrar elementos HTML por nombre de etiqueta</h2>
-            <p>
-              <strong>Ejemplo:</strong><br>
-              Este ejemplo encuentra el elemento con <strong>id="main"</strong> y luego encuentra todos las etiquetas <strong>&lt;p&gt;</strong> dentro del <strong>"main"</strong> con el método <strong>getElementsByTagName()</strong>:<br>
-            </p>
-            <center class="msgg">Cualquier cambio que se realice, se reflejará automáticamente</center>
-                        <div style="margin-left: 50px;">
-              <textarea id=code2 name=code>
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-</head>
-<body>
-  <h2>Encontrando elementos HTML por el nombre de la Etiqueta</h2>
 
-  <div id="main">
-    <p>Uso de los elmentos de JavaScript HTML DOM</p>
-    <p>Este ejemplo demuestra el uso del metodo: <b>getElementsByTagName</b></p>
-    <p>Hola mundo!</p>
-  </div>
-
-  <p id="demo1"></p>
-  <p id="demo2"></p>
-
-  <script>
-
-    // const x = document.getElementById("main");
-    // const y = x.getElementsByTagName("p");
-    // document.getElementById("demo1").innerHTML = "El primer parrafo de indice 0 dentro del main es: " + y[0].innerHTML;
-    // document.getElementById("demo2").innerHTML = "El tercer parrafo de indice 2 dentro del main es: " + y[2].innerHTML;
-
-    // Por motivos de ejecución en la página, no se puede usar el método anterior, por lo que se debe usar el método siguiente:
-    document.getElementById("demo1").innerHTML = 
-    "El primer parrafo de indice 0 dentro del main es: " 
-    + document.getElementById("main").getElementsByTagName("p")[0].innerHTML;
-
-    document.getElementById("demo2").innerHTML = 
-    "El tercer parrafo de indice 2 dentro del main es: " 
-    + document.getElementById("main").getElementsByTagName("p")[2].innerHTML;
-  </script>
-
-</body>
-</html>
-              </textarea>
-              <iframe id=preview2></iframe>
-            </div>
-            <br>
-
-            <!-- Por nombre de clase -->
-            <h2 class="subtittle">Encontrar elementos HTML por nombre de clase</h2>
-            <p>
-              <strong>Ejemplo:</strong><br>
-              Este ejemplo devuelve una lista de todos los elementos con <strong>class="intro"</strong> con el método <strong>getElementsByClassName()</strong>:<br>
-            </p>
-            <center class="msgg">Cualquier cambio que se realice, se reflejará automáticamente</center>
-                        <div style="margin-left: 50px;">
-              <textarea id=code3 name=code>
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-</head>
-<body>
-  <h2>Encontrando elementos HTML por el nombre de la clase</h2>
-
-  <p>Uso de los elmentos de JavaScript HTML DOM</p>
-
-  <p class="intro">Hola mundo!</p>
-  <p class="intro">Este ejemplo demuestra el uso del metodo: <b>getElementsByClassName</b></p>
-
-  <p id="demo"></p>
-
-  <script>
-    // const clase = document.getElementsByClassName("intro");
-    // document.getElementById("demo").innerHTML = "El segundo parrafo de indice 1 con la clase 'intro': " + clase[1].innerHTML;
-
-    // Por motivos de ejecución en la página, no se puede usar el método anterior, por lo que se debe usar el método siguiente:
-    document.getElementById("demo").innerHTML = 
-    "El segundo parrafo de indice 1 con la clase 'intro': " 
-    + document.getElementsByClassName("intro")[1].innerHTML;
-  </script>
-
-</body>
-</html>
-              </textarea>
-              <iframe id=preview3></iframe>
-            </div>
-            <br>
-
-            <!-- Mediante selectores CSS -->
-            <h2 class="subtittle">Encontrar elementos HTML mediante selectores CSS</h2>
-            <p>
-              <strong>Ejemplo:</strong><br>
-              Este ejemplo devuelve una lista de todos los <strong>&lt;p&gt;</strong> elementos con <strong>class="intro"</strong> con el método <strong>querySelectorAll()</strong>:<br>
-            </p>
-            <center class="msgg">Cualquier cambio que se realice, se reflejará automáticamente</center>
-                        <div style="margin-left: 50px;">
-              <textarea id=code4 name=code>
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-</head>
-<body>
-  <h2>Encontrando elementos HTML mediate Selectores</h2>
-
-  <p id="intro">Uso de los elmentos de JavaScript HTML DOM</p>
-
-  <p class="intro">Hola mundo!</p>
-  <p class="intro">Este ejemplo demuestra el uso del metodo: <b>querySelectorAll</b></p>
-
-  <p id="demo"></p>
-
-  <script>
-    // const quer = document.querySelectorAll("p.intro");
-    // document.getElementById("demo").innerHTML =  "El primer parrafo de indice 0 con la clase 'intro' es: " + quer[0].innerHTML;
-
-    // Por motivos de ejecución en la página, no se puede usar el método anterior, por lo que se debe usar el método siguiente:
-    document.getElementById("demo").innerHTML =  
-    "El primer parrafo de indice 0 con la clase 'intro' es: " 
-    + document.querySelectorAll("p.intro")[0].innerHTML;
-  </script>
-
-</body>
-</html>
-              </textarea>
-              <iframe id=preview4></iframe>
-            </div>
-            <br>
-
-            <!-- Por colecciones de objetos -->
-            <h2 class="subtittle">Encontrar elementos HTML por colecciones de objetos HTML</h2>
-            <p>
-              <strong>Ejemplo:</strong><br>
-              Este ejemplo encuentra el elemento de formulario con <strong>id="frm1"</strong>, en la colección de formularios, y muestra todos los valores de los elementos:<br>
-            </p>
-            <center class="msgg">Cualquier cambio que se realice, se reflejará automáticamente</center>
-                        <div style="margin-left: 50px;">
-              <textarea id=code5 name=code>
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-</head>
-<body>
-  <h2>Encontrando elementos HTML por colecciones de objetos</h2>
-
-  <p id="intro">Uso de los elmentos de JavaScript HTML DOM</p>
-  <p>Este ejemplo encunetra los elemtos HTML usando <b>document.forms</b></p>
-
-  <form id="frm1">
-  Nombre: <input type="text" name="fname" value="Pedro"><br>
-  Apellido: <input type="text" name="lname" value="Perez"><br><br>
-  <input type="submit" value="Enviar">
-  </form>
-
-  <p>Valores de cada elemento en el formulario:</p>
-
-  <p id="demo"></p>
-
-  <script>
-    // const docu = document.forms["frm1"];
-    // let text = "";
-    // for (let i = 0; i < docu.length ;i++) {
-    //   text += docu.elements[i].value + "<br>";
-    // }
-    // document.getElementById("demo").innerHTML = text;
-
-    // Por motivos de ejecución en la página, no se puede usar el método anterior, por lo que se debe usar el método siguiente:
-    let text = "";
-    for (let i = 0; i < document.forms["frm1"].length ;i++) {
-      text += document.forms["frm1"].elements[i].value + "<br>";
-    }
-    document.getElementById("demo").innerHTML = text;
-
-  </script>
-
-</body>
-</html>
-              </textarea>
-              <iframe id=preview5></iframe>
-            </div>
           </div>
         </div>
+      </div>
       </div>
     </section><!-- End ELEMENTS Details Section -->
 
@@ -373,7 +229,8 @@
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -390,6 +247,14 @@
   <script>
     var delay;
 
+    var noEditor = CodeMirror.fromTextArea(document.getElementById('mostrarjson'), {
+      mode: 'application/ld+json',
+      lineNumbers: true,
+      theme: 'default',
+      readOnly: true
+    });
+    noEditor.setSize("100%", "400");
+
     var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
       mode: 'text/html',
       lineNumbers: true,
@@ -403,58 +268,6 @@
       delay = setTimeout(updatePreview(editor, 'preview'), 100);
     });
 
-    var editor2 = CodeMirror.fromTextArea(document.getElementById('code2'), {
-      mode: 'text/html',
-      lineNumbers: true,
-      theme: 'mbo',
-      autoCloseTags: true
-    });
-    editor2.setSize("500", "400");
-
-    editor2.on("change", function () {
-      clearTimeout(delay);
-      delay = setTimeout(updatePreview(editor2, 'preview2'), 100);
-    });
-
-    var editor3 = CodeMirror.fromTextArea(document.getElementById('code3'), {
-      mode: 'text/html',
-      lineNumbers: true,
-      theme: 'mbo',
-      autoCloseTags: true
-    });
-    editor3.setSize("500", "400");
-
-    editor3.on("change", function () {
-      clearTimeout(delay);
-      delay = setTimeout(updatePreview(editor3, 'preview3'), 100);
-    });
-
-    var editor4 = CodeMirror.fromTextArea(document.getElementById('code4'), {
-      mode: 'text/html',
-      lineNumbers: true,
-      theme: 'mbo',
-      autoCloseTags: true
-    });
-    editor4.setSize("500", "400");
-
-    editor4.on("change", function () {
-      clearTimeout(delay);
-      delay = setTimeout(updatePreview(editor4, 'preview4'), 100);
-    });
-
-    var editor5 = CodeMirror.fromTextArea(document.getElementById('code5'), {
-      mode: 'text/html',
-      lineNumbers: true,
-      theme: 'mbo',
-      autoCloseTags: true
-    });
-    editor5.setSize("500", "400");
-
-    editor5.on("change", function () {
-      clearTimeout(delay);
-      delay = setTimeout(updatePreview(editor5, 'preview5'), 100);
-    });
-
     function updatePreview(editor, preview) {
       var editor = editor;
       var preview = preview;
@@ -466,10 +279,6 @@
     }
 
     setTimeout(updatePreview(editor, 'preview'), 100);
-    setTimeout(updatePreview(editor2, 'preview2'), 100);
-    setTimeout(updatePreview(editor3, 'preview3'), 100);
-    setTimeout(updatePreview(editor4, 'preview4'), 100);
-    setTimeout(updatePreview(editor5, 'preview5'), 100);
   </script>
 
 </body>
