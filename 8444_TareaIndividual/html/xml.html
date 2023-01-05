@@ -166,12 +166,12 @@
             <div class="container">
               <div class="row">
                 <div class="col-lg-6">
-                  <p><strong>XML:</strong></p>
+                  <p><strong>XML (cd_catalog_with_css.xml):</strong></p>
 
                   <div style="margin-left: 50px;">
                     <textarea id=mostrarxml2 name=noeditor2>
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/css" href="../files/cd_catalog.css"?>
+<?xml-stylesheet type="text/css" href="cd_catalog.css"?>
 <CATALOG>
   <CD>
     <TITLE>Empire Burlesque</TITLE>
@@ -220,7 +220,7 @@
                 </div>
 
                 <div class="col-lg-6">
-                  <p><strong>CSS:</strong></p>
+                  <p><strong>CSS (cd_catalog.css):</strong></p>
 
                   <div style="margin-left: 50px;">
                     <textarea id=mostrarcss name=noeditor3>
@@ -254,6 +254,7 @@ COUNTRY, PRICE, YEAR, COMPANY {
               </div>
             </div><!-- end container -->
             <br>
+
             <p><strong>Resultado</strong></p>
 
             <iframe id=preview src="../files/cd_catalog_with_css.xml" style="  width: 100%; height: 440px;"></iframe>
@@ -327,6 +328,14 @@ COUNTRY, PRICE, YEAR, COMPANY {
       readOnly: true
     });
     noeditor3.setSize("100%", "500");
+
+    var noeditor4 = CodeMirror.fromTextArea(document.getElementById('mostrarhtml'), {
+      mode: 'text/html',
+      lineNumbers: true,
+      theme: 'default',
+      readOnly: true
+    });
+    noeditor4.setSize("100%", "265");
 
   </script>
 
