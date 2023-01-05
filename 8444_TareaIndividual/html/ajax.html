@@ -12,7 +12,9 @@
   <link href="../assets/img/ajax favi.png" rel="icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
@@ -96,108 +98,380 @@
         <div class="row gy-4">
           <div class="col-lg-10">
             <h1 class="tittle">¿Qué es AJAX?</h1>
-            <p>A menudo, con JavaScript, se desea manipular elementos HTML.
-              Para hacerlo, primero debemos que encontrar los elementos. Hay varias maneras de hacer esto:
+            <p>AJAX significa JavaScript asíncrono y XML (Asynchronous JavaScript and XML) se refiere a un grupo de
+              tecnologías que se utilizan para
+              desarrollar aplicaciones web. Al combinar estas tecnologías, las páginas web parece que son más receptivas
+              puesto que los paquetes pequeños de datos se intercambian con el servidor y las páginas web no se vuelven
+              a cargar cada vez que un usuario realiza un cambio de entrada. Ajax permite que un usuario de la
+              aplicación web interactúe con una página web sin la interrupción que implica volver a cargar la página
+              web. La interacción del sitio web ocurre rápidamente sólo con partes de la página de recarga y
+              renovación.<br>
             </p>
+            <p>AJAX se compone de las siguientes tecnologías:</p>
 
             <ul class="lis">
-              <li>Encontrar elementos HTML por <strong>ID</strong>.</li>
-              <li>Encontrar elementos HTML por <strong>nombre de etiqueta</strong>.</li>
-              <li>Encontrar elementos HTML por <strong>nombre de clase</strong>.</li>
-              <li>Encontrar elementos HTML mediante <strong>selectores CSS</strong>.</li>
-              <li>Encontrar elementos HTML por <strong>colecciones de objetos HTML</strong>.</li>
+              <li><strong>XHTML</strong> y <strong>CSS</strong> para presentar información.</li>
+              <li><strong>DOM</strong>.</li>
+              <li>El objeto <strong>XMLHttpRequest</strong> para manipular los datos de forma asíncrona con el servidor
+                web.</li>
+              <li><strong>XML</strong>, <strong>HTML</strong> y <strong>XSLT</strong>para el intercambio y la
+                manipulación de datos.</li>
+              <li>Se visualiza JavaScript para enlazar solicitudes e información de datos.</li>
+            </ul>
+
+            <p>
+              En una aplicación web Ajax, no se interrumpe el usuario en interacciones con la aplicación web. El motor
+              de Ajax o el intérprete JavaScript permite que el usuario interactúe con la aplicación web
+              independientemente del transporte HTTP procedente del servidor o que tenga el servidor como destino
+              representando la interfaz y gestionando las comunicaciones con el servidor en nombre del usuario.
+            </p>
+            <img src="../assets/img/ajaxWebAppModel.gif" class="img-fluid" alt=""><br>
+            <br>
+
+            <h2 class="subtittle">Características:</h2>
+            <ul class="lis">
+              <li><strong>Asincronía:</strong> AJAX permite enviar y recibir datos del servidor de manera asíncrona, lo
+                que significa que la página no se recarga completamente. Esto hace que las aplicaciones web sean más
+                rápidas y sensibles al usuario.</li>
+              <li><strong>Interacción en tiempo real:</strong> Con AJAX, las aplicaciones web pueden actualizar
+                automáticamente su contenido sin necesidad de recargar la página completa. Esto permite una interacción
+                en tiempo real con el servidor y mejora la experiencia del usuario.</li>
+              <li><strong>Mejoras en la usabilidad:</strong> AJAX permite que las aplicaciones web sean más fáciles de
+                usar al permitir la actualización de contenido sin necesidad de recargar la página completa.</li>
+              <li><strong>Mejoras en el rendimiento:</strong> AJAX permite reducir la cantidad de datos que se envían y
+                reciben entre el navegador y el servidor, lo que puede mejorar el rendimiento de la aplicación.</li>
+              <li><strong>Independiente del lenguaje de programación del servidor:</strong> AJAX se puede utilizar con
+                diferentes lenguajes de programación del servidor, como PHP, Java o .NET.</li>
+              <li><strong>Soporte en la mayoría de los navegadores web:</strong> AJAX es compatible con la mayoría de
+                los navegadores web modernos, lo que lo hace accesible para la mayoría de los usuarios.</li>
             </ul>
 
             <!-- Por nombre de ID -->
-            <h2 class="subtittle">Encontrar elementos HTML por ID</h2>
-            <p>
-              <strong>Ejemplo:</strong><br>
-              En este ejemplo se encuentra el elemento con <strong>id="intro"</strong> con el método
-              <strong>document.getElementById()</strong>:<br>
-            <ul class="lis">
-              <li>Si se encuentra el elemento, el método devolverá el elemento como un objeto.</li>
-                <li>Si no se encuentra el elemento, el elemento contendrá <strong>null</strong>.</li>
-            </ul>
-            </p>
-            <center class="msgg">Cualquier cambio que se realice, se reflejará automáticamente</center>
+            <h3 class="subtittle2"><br>Ejemplo de XML y CSS:</h3>
+            <p><strong>TXT (ajax_info.txt):</strong></p>
+
+            <div style="margin-left: 50px;">
+              <textarea id=mostrarhtml name=noeditor>
+<h1>AJAX</h1>
+<p>AJAX no es un lenguaje de progrmación.</p>
+<p>AJAX es una técnica para acceder a servidores web desde una página web.</p>
+<p>AJAX significa JavaScript asíncrono y XML</p>
+</textarea>
+
+            </div>
+
+
+            <p><strong>Ejecución:</strong></p>
             <div style="margin-left: 50px;">
               <textarea id=code name=code>
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-</head>
 <body>
-  <h2>Encontrando elementos HTML por ID</h2>
 
-  <p id="intro">Uso de los elmentos de JavaScript HTML DOM</p>
-  <p>Este ejemplo demuestra el uso del metodo: <b>getElementsById</b></p>
+<div id="demo">
+<h2>The XMLHttpRequest Object</h2>
+<button type="button" onclick="loadDoc()">Change Content</button>
+</div>
 
-  <p id="demo"></p>
-
-  <script>
-    // const elemento = document.getElementById("intro");
-    // document.getElementById("demo").innerHTML = "El texto que hay en el parrafo con el id='intro' es: " + elemento.innerHTML;
-
-    // Por motivos de ejecución en la página, no se puede usar el método anterior, por lo que se debe usar el método siguiente:
-    document.getElementById("demo").innerHTML = 
-    "El texto que hay en el parrafo con el id='intro' es: " + 
-    document.getElementById("intro").innerHTML;
-  </script>
+<script>
+  function loadDoc() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function () {
+      document.getElementById("demo").innerHTML =
+        this.responseText;
+    }
+    xhttp.open("GET", "../files/ajax_info.txt");
+    xhttp.send();
+  }
+</script>
 
 </body>
 </html>
-              </textarea>
+</textarea>
               <iframe id=preview></iframe>
             </div>
             <br>
             <p>
-              <strong>Nota:</strong> El método <strong>document.getElementById()</strong> solo devuelve el primer elemento con el ID especificado.
+              <strong>Nota:</strong> El método <strong>document.getElementById()</strong> solo devuelve el primer
+              elemento con el ID especificado.
               Si hay más de un elemento con el mismo ID, este método devolverá el primer elemento en el documento.
             </p>
             <br>
 
             <!-- Por nombre de etiqueta -->
-            <h2 class="subtittle">Encontrar elementos HTML por nombre de etiqueta</h2>
-            <p>
-              <strong>Ejemplo:</strong><br>
-              Este ejemplo encuentra el elemento con <strong>id="main"</strong> y luego encuentra todos las etiquetas <strong>&lt;p&gt;</strong> dentro del <strong>"main"</strong> con el método <strong>getElementsByTagName()</strong>:<br>
-            </p>
+            <h3 class="subtittle2">Ejemplo de AJAX y XML:</h3>
+            <div style="margin-left: 50px;">
+              <textarea id=mostrarxmlcd name=noeditor2>
+<CATALOG>
+  <CD>
+      <TITLE>Empire Burlesque</TITLE>
+      <ARTIST>Bob Dylan</ARTIST>
+      <COUNTRY>USA</COUNTRY>
+      <COMPANY>Columbia</COMPANY>
+      <PRICE>10.90</PRICE>
+      <YEAR>1985</YEAR>
+  </CD>
+  <CD>
+      <TITLE>Hide your heart</TITLE>
+      <ARTIST>Bonnie Tyler</ARTIST>
+      <COUNTRY>UK</COUNTRY>
+      <COMPANY>CBS Records</COMPANY>
+      <PRICE>9.90</PRICE>
+      <YEAR>1988</YEAR>
+  </CD>
+  <CD>
+      <TITLE>Greatest Hits</TITLE>
+      <ARTIST>Dolly Parton</ARTIST>
+      <COUNTRY>USA</COUNTRY>
+      <COMPANY>RCA</COMPANY>
+      <PRICE>9.90</PRICE>
+      <YEAR>1982</YEAR>
+  </CD>
+  <CD>
+      <TITLE>Still got the blues</TITLE>
+      <ARTIST>Gary Moore</ARTIST>
+      <COUNTRY>UK</COUNTRY>
+      <COMPANY>Virgin records</COMPANY>
+      <PRICE>10.20</PRICE>
+      <YEAR>1990</YEAR>
+  </CD>
+  <CD>
+      <TITLE>Eros</TITLE>
+      <ARTIST>Eros Ramazzotti</ARTIST>
+      <COUNTRY>EU</COUNTRY>
+      <COMPANY>BMG</COMPANY>
+      <PRICE>9.90</PRICE>
+      <YEAR>1997</YEAR>
+  </CD>
+  <CD>
+      <TITLE>One night only</TITLE>
+      <ARTIST>Bee Gees</ARTIST>
+      <COUNTRY>UK</COUNTRY>
+      <COMPANY>Polydor</COMPANY>
+      <PRICE>10.90</PRICE>
+      <YEAR>1998</YEAR>
+  </CD>
+  <CD>
+      <TITLE>Sylvias Mother</TITLE>
+      <ARTIST>Dr.Hook</ARTIST>
+      <COUNTRY>UK</COUNTRY>
+      <COMPANY>CBS</COMPANY>
+      <PRICE>8.10</PRICE>
+      <YEAR>1973</YEAR>
+  </CD>
+  <CD>
+      <TITLE>Maggie May</TITLE>
+      <ARTIST>Rod Stewart</ARTIST>
+      <COUNTRY>UK</COUNTRY>
+      <COMPANY>Pickwick</COMPANY>
+      <PRICE>8.50</PRICE>
+      <YEAR>1990</YEAR>
+  </CD>
+  <CD>
+      <TITLE>Romanza</TITLE>
+      <ARTIST>Andrea Bocelli</ARTIST>
+      <COUNTRY>EU</COUNTRY>
+      <COMPANY>Polydor</COMPANY>
+      <PRICE>10.80</PRICE>
+      <YEAR>1996</YEAR>
+  </CD>
+  <CD>
+      <TITLE>When a man loves a woman</TITLE>
+      <ARTIST>Percy Sledge</ARTIST>
+      <COUNTRY>USA</COUNTRY>
+      <COMPANY>Atlantic</COMPANY>
+      <PRICE>8.70</PRICE>
+      <YEAR>1987</YEAR>
+  </CD>
+  <CD>
+      <TITLE>Black angel</TITLE>
+      <ARTIST>Savage Rose</ARTIST>
+      <COUNTRY>EU</COUNTRY>
+      <COMPANY>Mega</COMPANY>
+      <PRICE>10.90</PRICE>
+      <YEAR>1995</YEAR>
+  </CD>
+  <CD>
+      <TITLE>1999 Grammy Nominees</TITLE>
+      <ARTIST>Many</ARTIST>
+      <COUNTRY>USA</COUNTRY>
+      <COMPANY>Grammy</COMPANY>
+      <PRICE>10.20</PRICE>
+      <YEAR>1999</YEAR>
+  </CD>
+  <CD>
+      <TITLE>For the good times</TITLE>
+      <ARTIST>Kenny Rogers</ARTIST>
+      <COUNTRY>UK</COUNTRY>
+      <COMPANY>Mucik Master</COMPANY>
+      <PRICE>8.70</PRICE>
+      <YEAR>1995</YEAR>
+  </CD>
+  <CD>
+      <TITLE>Big Willie style</TITLE>
+      <ARTIST>Will Smith</ARTIST>
+      <COUNTRY>USA</COUNTRY>
+      <COMPANY>Columbia</COMPANY>
+      <PRICE>9.90</PRICE>
+      <YEAR>1997</YEAR>
+  </CD>
+  <CD>
+      <TITLE>Tupelo Honey</TITLE>
+      <ARTIST>Van Morrison</ARTIST>
+      <COUNTRY>UK</COUNTRY>
+      <COMPANY>Polydor</COMPANY>
+      <PRICE>8.20</PRICE>
+      <YEAR>1971</YEAR>
+  </CD>
+  <CD>
+      <TITLE>Soulsville</TITLE>
+      <ARTIST>Jorn Hoel</ARTIST>
+      <COUNTRY>Norway</COUNTRY>
+      <COMPANY>WEA</COMPANY>
+      <PRICE>7.90</PRICE>
+      <YEAR>1996</YEAR>
+  </CD>
+  <CD>
+      <TITLE>The very best of</TITLE>
+      <ARTIST>Cat Stevens</ARTIST>
+      <COUNTRY>UK</COUNTRY>
+      <COMPANY>Island</COMPANY>
+      <PRICE>8.90</PRICE>
+      <YEAR>1990</YEAR>
+  </CD>
+  <CD>
+      <TITLE>Stop</TITLE>
+      <ARTIST>Sam Brown</ARTIST>
+      <COUNTRY>UK</COUNTRY>
+      <COMPANY>A and M</COMPANY>
+      <PRICE>8.90</PRICE>
+      <YEAR>1988</YEAR>
+  </CD>
+  <CD>
+      <TITLE>Bridge of Spies</TITLE>
+      <ARTIST>T'Pau</ARTIST>
+      <COUNTRY>UK</COUNTRY>
+      <COMPANY>Siren</COMPANY>
+      <PRICE>7.90</PRICE>
+      <YEAR>1987</YEAR>
+  </CD>
+  <CD>
+      <TITLE>Private Dancer</TITLE>
+      <ARTIST>Tina Turner</ARTIST>
+      <COUNTRY>UK</COUNTRY>
+      <COMPANY>Capitol</COMPANY>
+      <PRICE>8.90</PRICE>
+      <YEAR>1983</YEAR>
+  </CD>
+  <CD>
+      <TITLE>Midt om natten</TITLE>
+      <ARTIST>Kim Larsen</ARTIST>
+      <COUNTRY>EU</COUNTRY>
+      <COMPANY>Medley</COMPANY>
+      <PRICE>7.80</PRICE>
+      <YEAR>1983</YEAR>
+  </CD>
+  <CD>
+      <TITLE>Pavarotti Gala Concert</TITLE>
+      <ARTIST>Luciano Pavarotti</ARTIST>
+      <COUNTRY>UK</COUNTRY>
+      <COMPANY>DECCA</COMPANY>
+      <PRICE>9.90</PRICE>
+      <YEAR>1991</YEAR>
+  </CD>
+  <CD>
+      <TITLE>The dock of the bay</TITLE>
+      <ARTIST>Otis Redding</ARTIST>
+      <COUNTRY>USA</COUNTRY>
+      <COMPANY>Stax Records</COMPANY>
+      <PRICE>7.90</PRICE>
+      <YEAR>1968</YEAR>
+  </CD>
+  <CD>
+      <TITLE>Picture book</TITLE>
+      <ARTIST>Simply Red</ARTIST>
+      <COUNTRY>EU</COUNTRY>
+      <COMPANY>Elektra</COMPANY>
+      <PRICE>7.20</PRICE>
+      <YEAR>1985</YEAR>
+  </CD>
+  <CD>
+      <TITLE>Red</TITLE>
+      <ARTIST>The Communards</ARTIST>
+      <COUNTRY>UK</COUNTRY>
+      <COMPANY>London</COMPANY>
+      <PRICE>7.80</PRICE>
+      <YEAR>1987</YEAR>
+  </CD>
+  <CD>
+      <TITLE>Unchain my heart</TITLE>
+      <ARTIST>Joe Cocker</ARTIST>
+      <COUNTRY>USA</COUNTRY>
+      <COMPANY>EMI</COMPANY>
+      <PRICE>8.20</PRICE>
+      <YEAR>1987</YEAR>
+  </CD>
+</CATALOG>
+              </textarea>
+            </div>
+            <br>
+            <p>&nbsp;</p>
+
+
             <center class="msgg">Cualquier cambio que se realice, se reflejará automáticamente</center>
-                        <div style="margin-left: 50px;">
+            <div style="margin-left: 50px;">
               <textarea id=code2 name=code>
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+  <style>
+  table,th,td {
+    border : 1px solid black;
+    border-collapse: collapse;
+  }
+  th,td {
+    padding: 5px;
+  }
+  </style>
 </head>
 <body>
-  <h2>Encontrando elementos HTML por el nombre de la Etiqueta</h2>
 
-  <div id="main">
-    <p>Uso de los elmentos de JavaScript HTML DOM</p>
-    <p>Este ejemplo demuestra el uso del metodo: <b>getElementsByTagName</b></p>
-    <p>Hola mundo!</p>
-  </div>
-
-  <p id="demo1"></p>
-  <p id="demo2"></p>
+  <p>Click on a CD to display album information.</p>
+  <p id='showCD'></p>
+  <table id="demo"></table>
 
   <script>
+    const xhttp = new XMLHttpRequest();
+    let cd;
+    xhttp.onload = function () {
+      const xmlDoc = xhttp.responseXML;
+      cd = xmlDoc.getElementsByTagName("CD");
+      loadCD();
+    }
+    xhttp.open("GET", "../files/cd_catalog.xml");
+    xhttp.send();
 
-    // const x = document.getElementById("main");
-    // const y = x.getElementsByTagName("p");
-    // document.getElementById("demo1").innerHTML = "El primer parrafo de indice 0 dentro del main es: " + y[0].innerHTML;
-    // document.getElementById("demo2").innerHTML = "El tercer parrafo de indice 2 dentro del main es: " + y[2].innerHTML;
+    function loadCD() {
+      let table = "<tr><th>Artist</th><th>Title</th></tr>";
+      for (let i = 0; i < cd.length; i++) {
+        table += "<tr onclick='displayCD(" + i + ")'><td>";
+        table += cd[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue;
+        table += "</td><td>";
+        table += cd[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue;
+        table += "</td></tr>";
+      }
+      document.getElementById("demo").innerHTML = table;
+    }
 
-    // Por motivos de ejecución en la página, no se puede usar el método anterior, por lo que se debe usar el método siguiente:
-    document.getElementById("demo1").innerHTML = 
-    "El primer parrafo de indice 0 dentro del main es: " 
-    + document.getElementById("main").getElementsByTagName("p")[0].innerHTML;
-
-    document.getElementById("demo2").innerHTML = 
-    "El tercer parrafo de indice 2 dentro del main es: " 
-    + document.getElementById("main").getElementsByTagName("p")[2].innerHTML;
+    function displayCD(i) {
+      document.getElementById("showCD").innerHTML =
+        "Artist: " +
+        cd[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+        "<br>Title: " +
+        cd[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+        "<br>Year: " +
+        cd[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue;
+    }
   </script>
 
 </body>
@@ -207,140 +481,8 @@
             </div>
             <br>
 
-            <!-- Por nombre de clase -->
-            <h2 class="subtittle">Encontrar elementos HTML por nombre de clase</h2>
-            <p>
-              <strong>Ejemplo:</strong><br>
-              Este ejemplo devuelve una lista de todos los elementos con <strong>class="intro"</strong> con el método <strong>getElementsByClassName()</strong>:<br>
-            </p>
-            <center class="msgg">Cualquier cambio que se realice, se reflejará automáticamente</center>
-                        <div style="margin-left: 50px;">
-              <textarea id=code3 name=code>
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-</head>
-<body>
-  <h2>Encontrando elementos HTML por el nombre de la clase</h2>
 
-  <p>Uso de los elmentos de JavaScript HTML DOM</p>
 
-  <p class="intro">Hola mundo!</p>
-  <p class="intro">Este ejemplo demuestra el uso del metodo: <b>getElementsByClassName</b></p>
-
-  <p id="demo"></p>
-
-  <script>
-    // const clase = document.getElementsByClassName("intro");
-    // document.getElementById("demo").innerHTML = "El segundo parrafo de indice 1 con la clase 'intro': " + clase[1].innerHTML;
-
-    // Por motivos de ejecución en la página, no se puede usar el método anterior, por lo que se debe usar el método siguiente:
-    document.getElementById("demo").innerHTML = 
-    "El segundo parrafo de indice 1 con la clase 'intro': " 
-    + document.getElementsByClassName("intro")[1].innerHTML;
-  </script>
-
-</body>
-</html>
-              </textarea>
-              <iframe id=preview3></iframe>
-            </div>
-            <br>
-
-            <!-- Mediante selectores CSS -->
-            <h2 class="subtittle">Encontrar elementos HTML mediante selectores CSS</h2>
-            <p>
-              <strong>Ejemplo:</strong><br>
-              Este ejemplo devuelve una lista de todos los <strong>&lt;p&gt;</strong> elementos con <strong>class="intro"</strong> con el método <strong>querySelectorAll()</strong>:<br>
-            </p>
-            <center class="msgg">Cualquier cambio que se realice, se reflejará automáticamente</center>
-                        <div style="margin-left: 50px;">
-              <textarea id=code4 name=code>
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-</head>
-<body>
-  <h2>Encontrando elementos HTML mediate Selectores</h2>
-
-  <p id="intro">Uso de los elmentos de JavaScript HTML DOM</p>
-
-  <p class="intro">Hola mundo!</p>
-  <p class="intro">Este ejemplo demuestra el uso del metodo: <b>querySelectorAll</b></p>
-
-  <p id="demo"></p>
-
-  <script>
-    // const quer = document.querySelectorAll("p.intro");
-    // document.getElementById("demo").innerHTML =  "El primer parrafo de indice 0 con la clase 'intro' es: " + quer[0].innerHTML;
-
-    // Por motivos de ejecución en la página, no se puede usar el método anterior, por lo que se debe usar el método siguiente:
-    document.getElementById("demo").innerHTML =  
-    "El primer parrafo de indice 0 con la clase 'intro' es: " 
-    + document.querySelectorAll("p.intro")[0].innerHTML;
-  </script>
-
-</body>
-</html>
-              </textarea>
-              <iframe id=preview4></iframe>
-            </div>
-            <br>
-
-            <!-- Por colecciones de objetos -->
-            <h2 class="subtittle">Encontrar elementos HTML por colecciones de objetos HTML</h2>
-            <p>
-              <strong>Ejemplo:</strong><br>
-              Este ejemplo encuentra el elemento de formulario con <strong>id="frm1"</strong>, en la colección de formularios, y muestra todos los valores de los elementos:<br>
-            </p>
-            <center class="msgg">Cualquier cambio que se realice, se reflejará automáticamente</center>
-                        <div style="margin-left: 50px;">
-              <textarea id=code5 name=code>
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-</head>
-<body>
-  <h2>Encontrando elementos HTML por colecciones de objetos</h2>
-
-  <p id="intro">Uso de los elmentos de JavaScript HTML DOM</p>
-  <p>Este ejemplo encunetra los elemtos HTML usando <b>document.forms</b></p>
-
-  <form id="frm1">
-  Nombre: <input type="text" name="fname" value="Pedro"><br>
-  Apellido: <input type="text" name="lname" value="Perez"><br><br>
-  <input type="submit" value="Enviar">
-  </form>
-
-  <p>Valores de cada elemento en el formulario:</p>
-
-  <p id="demo"></p>
-
-  <script>
-    // const docu = document.forms["frm1"];
-    // let text = "";
-    // for (let i = 0; i < docu.length ;i++) {
-    //   text += docu.elements[i].value + "<br>";
-    // }
-    // document.getElementById("demo").innerHTML = text;
-
-    // Por motivos de ejecución en la página, no se puede usar el método anterior, por lo que se debe usar el método siguiente:
-    let text = "";
-    for (let i = 0; i < document.forms["frm1"].length ;i++) {
-      text += document.forms["frm1"].elements[i].value + "<br>";
-    }
-    document.getElementById("demo").innerHTML = text;
-
-  </script>
-
-</body>
-</html>
-              </textarea>
-              <iframe id=preview5></iframe>
-            </div>
           </div>
         </div>
       </div>
@@ -374,7 +516,8 @@
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -391,6 +534,14 @@
   <script>
     var delay;
 
+    var noeditor = CodeMirror.fromTextArea(document.getElementById('mostrarhtml'), {
+      mode: 'text/html',
+      lineNumbers: true,
+      theme: 'default',
+      readOnly: true
+    });
+    noeditor.setSize("100%", "125");
+
     var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
       mode: 'text/html',
       lineNumbers: true,
@@ -404,6 +555,14 @@
       delay = setTimeout(updatePreview(editor, 'preview'), 100);
     });
 
+    var noeditor2 = CodeMirror.fromTextArea(document.getElementById('mostrarxmlcd'), {
+      mode: 'xml',
+      lineNumbers: true,
+      theme: 'default',
+      readOnly: true
+    });
+    noeditor2.setSize("100%", "500");
+
     var editor2 = CodeMirror.fromTextArea(document.getElementById('code2'), {
       mode: 'text/html',
       lineNumbers: true,
@@ -412,49 +571,6 @@
     });
     editor2.setSize("500", "400");
 
-    editor2.on("change", function () {
-      clearTimeout(delay);
-      delay = setTimeout(updatePreview(editor2, 'preview2'), 100);
-    });
-
-    var editor3 = CodeMirror.fromTextArea(document.getElementById('code3'), {
-      mode: 'text/html',
-      lineNumbers: true,
-      theme: 'mbo',
-      autoCloseTags: true
-    });
-    editor3.setSize("500", "400");
-
-    editor3.on("change", function () {
-      clearTimeout(delay);
-      delay = setTimeout(updatePreview(editor3, 'preview3'), 100);
-    });
-
-    var editor4 = CodeMirror.fromTextArea(document.getElementById('code4'), {
-      mode: 'text/html',
-      lineNumbers: true,
-      theme: 'mbo',
-      autoCloseTags: true
-    });
-    editor4.setSize("500", "400");
-
-    editor4.on("change", function () {
-      clearTimeout(delay);
-      delay = setTimeout(updatePreview(editor4, 'preview4'), 100);
-    });
-
-    var editor5 = CodeMirror.fromTextArea(document.getElementById('code5'), {
-      mode: 'text/html',
-      lineNumbers: true,
-      theme: 'mbo',
-      autoCloseTags: true
-    });
-    editor5.setSize("500", "400");
-
-    editor5.on("change", function () {
-      clearTimeout(delay);
-      delay = setTimeout(updatePreview(editor5, 'preview5'), 100);
-    });
 
     function updatePreview(editor, preview) {
       var editor = editor;
@@ -468,9 +584,6 @@
 
     setTimeout(updatePreview(editor, 'preview'), 100);
     setTimeout(updatePreview(editor2, 'preview2'), 100);
-    setTimeout(updatePreview(editor3, 'preview3'), 100);
-    setTimeout(updatePreview(editor4, 'preview4'), 100);
-    setTimeout(updatePreview(editor5, 'preview5'), 100);
   </script>
 
 </body>
