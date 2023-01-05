@@ -147,7 +147,9 @@
             </ul>
 
             <!-- Por nombre de ID -->
-            <h3 class="subtittle2"><br>Ejemplo de XML y CSS:</h3>
+            <h3 class="subtittle2"><br>Ejemplo de AJAX y HTML:</h3>
+            <p>Este ejemplo reemplaza el contenido del elemento con el <strong>id="demo"</strong> de la página web por
+              el contenido de un archivo de texto <strong>ajax_info.txt</strong>.</p>
             <p><strong>TXT (ajax_info.txt):</strong></p>
 
             <div style="margin-left: 50px;">
@@ -159,6 +161,7 @@
 </textarea>
 
             </div>
+            <p>&nbsp;</p>
 
 
             <p><strong>Ejecución:</strong></p>
@@ -167,10 +170,11 @@
 <!DOCTYPE html>
 <html>
 <body>
+  <h1>Ejemplo de AJAX y HTML</h1>
 
 <div id="demo">
-<h2>The XMLHttpRequest Object</h2>
-<button type="button" onclick="loadDoc()">Change Content</button>
+<h2>Objeto XMLHttpRequest</h2>
+<button type="button" onclick="loadDoc()">Cambiar Contenido</button>
 </div>
 
 <script>
@@ -191,15 +195,13 @@
               <iframe id=preview></iframe>
             </div>
             <br>
-            <p>
-              <strong>Nota:</strong> El método <strong>document.getElementById()</strong> solo devuelve el primer
-              elemento con el ID especificado.
-              Si hay más de un elemento con el mismo ID, este método devolverá el primer elemento en el documento.
-            </p>
-            <br>
 
             <!-- Por nombre de etiqueta -->
             <h3 class="subtittle2">Ejemplo de AJAX y XML:</h3>
+            <p>Este ejemplo extrae el contenido de un archivo XML y lo muestra en una página web, al hacer click en el
+              nombre o artista del CD de la tabla nos aparecera información de dicho CD.
+            </p>
+            <p><strong>XML (cd_catalog.xml):</strong></p>
             <div style="margin-left: 50px;">
               <textarea id=mostrarxmlcd name=noeditor2>
 <CATALOG>
@@ -417,8 +419,7 @@
             <br>
             <p>&nbsp;</p>
 
-
-            <center class="msgg">Cualquier cambio que se realice, se reflejará automáticamente</center>
+            <p><strong>Ejecución:</strong></p>
             <div style="margin-left: 50px;">
               <textarea id=code2 name=code>
 <!DOCTYPE html>
