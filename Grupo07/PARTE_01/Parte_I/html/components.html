@@ -12,7 +12,9 @@
   <link href="../assets/img/favicon.png" rel="icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
@@ -86,8 +88,207 @@
     <section id="portfolio-details" class="portfolio-details">
       <div class="container">
 
-        
-        </div>
+        <h1 class="tittle">Componentes</h1>
+        <p>
+          El objeto del documento representa su página web.
+
+          Si desea acceder a cualquier elemento en una página HTML, siempre comienza accediendo al objeto del documento.
+
+          A continuación se muestran algunos ejemplos de cómo puede utilizar el objeto de documento para acceder y
+          manipular HTML.
+        </p><br>
+
+        <h2 class="subtittle">Encontrar elementos HTML</h2><br>
+
+        <table class="table table-bordered table-striped ">
+          <thead>
+            <tr class="active" style="text-align: center; border: 5px;">
+              <th>Método</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-info">
+              <td><strong>document.getElementById(id)</strong></td>
+              <td>Encuentra un elemento por el ID</td>
+            </tr>
+            <tr>
+              <td><strong>document.getElementsByTagName(name)</strong></td>
+              <td>Encuentra los elementos por el nombre de la etiqueta</td>
+            </tr>
+            <tr class="table-info">
+              <td><strong>document.getElementsByClassName(name)</strong></td>
+              <td>Encuentra por el nombre de la clase</td>
+            </tr>
+          </tbody>
+        </table>
+        <br><br>
+
+        <h2 class="subtittle">Cambio de elementos HTML</h2><br>
+
+        <table class="table table-bordered table-striped ">
+          <thead>
+            <tr class="active" style="text-align: center; border: 5px;">
+              <th>Propiedad</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-info">
+              <td><strong>element.innerHTML = new html content</strong></td>
+              <td>Cambia el innerHTML de un elemento</td>
+            </tr>
+            <tr>
+              <td><strong>element.attribute = new value</strong></td>
+              <td>Cambia el valor del atributo de un elemento HTML</td>
+            </tr>
+            <tr class="table-info">
+              <td><strong>element.style.property = new style</strong></td>
+              <td>Cambia el estilo de un elemento HTML</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="table table-bordered table-striped ">
+          <thead>
+            <tr class="active" style="text-align: center; border: 5px;">
+              <th>Método</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-info">
+              <td><strong>element.setAttribute(attribute, value)&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+              <td>Cambia el valor del atributo de un elemento HTML</td>
+            </tr>
+          </tbody>
+        </table>
+        <br><br>
+
+        <h2 class="subtittle">Adición y eliminación de elementos</h2><br>
+
+        <table class="table table-bordered table-striped ">
+          <thead>
+            <tr class="active" style="text-align: center; border: 5px;">
+              <th>Método</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-info">
+              <td><strong>document.createElement(element)</strong></td>
+              <td>Crea un elemento HTML</td>
+            </tr>
+            <tr>
+              <td><strong>document.removeChild(element)</strong></td>
+              <td>Elimina un elemento HTML</td>
+            </tr>
+            <tr class="table-info">
+              <td><strong>document.appendChild(element)</strong></td>
+              <td>Añade un elemento HTML</td>
+            </tr>
+            <tr>
+              <td><strong>document.replaceChild(new, old)</strong></td>
+              <td>Reemplaza un elemento HTML</td>
+            </tr>
+            <tr class="table-info">
+              <td><strong>document.write(text)</strong></td>
+              <td>Escribir en el flujo de salida HTML</td>
+            </tr>
+          </tbody>
+        </table>
+        <br><br>
+
+        <h2 class="subtittle">Adición de controladores de eventos</h2><br>
+
+        <table class="table table-bordered table-striped ">
+          <thead>
+            <tr class="active" style="text-align: center; border: 5px;">
+              <th>Método</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-info">
+              <td><strong>document.getElementById(id).onclick = function(){code}</strong></td>
+              <td>Agregar código de controlador de eventos a un evento onclick</td>
+            </tr>
+          </tbody>
+        </table>
+        <br><br>
+
+        <h2 class="subtittle">Encontrar objetos HTML</h2><br>
+
+        <table class="table table-bordered table-striped ">
+          <thead>
+            <tr class="active" style="text-align: center; border: 5px;">
+              <th>Propiedad</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-info">
+              <td><strong>document.baseURI</strong></td>
+              <td>Devuelve el URI base absoluto del documento.</td>
+            </tr>
+            <tr>
+              <td><strong>document.doctype</strong></td>
+              <td>Devuelve el tipo de documento del documento.</td>
+            </tr>
+            <tr class="table-info">
+              <td><strong>document.documentElement</strong></td>
+              <td>Devuelve el elemento &lt;html&gt;</td>
+            </tr>
+            <tr>
+              <td><strong>document.documentMode</strong></td>
+              <td>Devuelve la URI del documento</td>
+            </tr>
+            <tr class="table-info">
+              <td><strong>document.embeds</strong></td>
+              <td>Devuelve todos los elementos &lt;embed&lt;</td>
+            </tr>
+            <tr>
+              <td><strong>document.head</strong></td>
+              <td>Devuelve todos los elementos &lt;head&lt;</td>
+            </tr>
+            <tr class="table-info">
+              <td><strong>document.implementation</strong></td>
+              <td>Devuelve la implementación DOM</td>
+            </tr>
+            <tr>
+              <td><strong>document.inputEncoding</strong></td>
+              <td>Devuelve la codificación del documento (conjunto de caracteres)</td>
+            </tr>
+            <tr class="table-info">
+              <td><strong>document.lastModified</strong></td>
+              <td>Devuelve la fecha y hora en que se actualizó el documento.</td>
+            </tr>
+            <tr>
+              <td><strong>document.readyState</strong></td>
+              <td>Devuelve el estado (de carga) del documento</td>
+            </tr>
+            <tr class="table-info">
+              <td><strong>document.scripts</strong></td>
+              <td>Devuelve todos los elementos &lt;script&lt;</td>
+            </tr>
+            <tr>
+              <td><strong>document.strictErrorChecking</strong></td>
+              <td>Devuelve si se aplica la comprobación de errores</td>
+            </tr>
+            <tr class="table-info">
+              <td><strong>document.title</strong></td>
+              <td>Devuelve todos los elementos &lt;title&lt;</td>
+            </tr>
+            <tr>
+              <td><strong>document.URL</strong></td>
+              <td>Devuelve la URL completa del documento</td>
+            </tr>
+          </tbody>
+        </table>
+        <br><br>
+
+
+      </div>
       </div>
     </section><!-- End COMPONENTS Details Section -->
 
@@ -119,7 +320,8 @@
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
